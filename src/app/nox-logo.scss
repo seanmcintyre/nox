@@ -1,0 +1,39 @@
+:host {
+  background: linear-gradient(310deg, rgb(14,6,12), rgb(24,16,20));
+  padding: 0;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+}
+
+svg {
+  width: 200px;
+  height: 200px;
+  background: transparent;
+  opacity: 1;
+}
+
+.st0{
+  fill:none;
+  stroke:#000000;
+  stroke-width:9;
+  stroke-miterlimit:10;
+}
+
+.st3{
+  fill:#FFFFFF;
+}
+
+h1 {
+  color: #FFF;
+  margin: 50px auto;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 1.47px;
+  text-transform: uppercase;
+  opacity: 0.5;
+}

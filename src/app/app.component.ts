@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-const round2 = (num) => Math.round((num * 100) / 100);
+const round2 = (num) => Math.round(num * 100) / 100;
 const throttle = (delay, callback) => {
   let lastCall = null;
   return function () {
@@ -20,15 +20,14 @@ const throttle = (delay, callback) => {
 export class AppComponent {
   title = 'app';
 
-  constructor() {
-  }
+  constructor() {}
 
   ngOnInit() {
     const frame = (document.querySelector('.frame') as HTMLElement);
     const logo = (document.querySelector('.logo') as HTMLElement);
-    document.onmousemove = throttle(50, (e: any) => {
-      const x = round2((e.clientX / window.screen.width * 4) - 1);
-      const y = round2((e.clientY / window.screen.height * -2) + 1);
+    document.onmousemove = throttle(100, (e: any) => {
+      const x = round2((e.clientX / window.screen.width * 8) - 2);
+      const y = round2((e.clientY / window.screen.height * -4) + 2);
 
       frame.style.setProperty('--x', `${ x + 0.01 }deg`);
       frame.style.setProperty('--y', `${ y + 0.01 }deg`);

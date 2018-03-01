@@ -29,6 +29,11 @@
     rotateY(var(--x))
     rotateX(var(--y));
 
+  display: none;
+  @media screen and (min-width: 520px) {
+    display: block
+  }
+
   //background: linear-gradient(320deg, rgba(white, 0.12), rgba(black, 0.12));
   //box-shadow: 0 0 80px 0 rgba(rgb(135, 0, 255), 0.15);
 }
@@ -39,10 +44,15 @@
   height: calc(100vh - 110px);
   top: 50%;
   left: 50%;
-  border: 1px dashed rgba(white, 0.15);
+  border: 1px solid rgba(white, 0.10);
   transition: 100ms;
   border-radius: 5px;
   transform: translate(-50%, -50%);
+
+  display: none;
+  @media screen and (min-width: 520px) {
+    display: block
+  }
 }
 
 .logo {
